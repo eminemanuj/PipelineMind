@@ -1,0 +1,17 @@
+name: 'pipelinemind'
+version: '1.0.0'
+config-version: 2
+
+profile: 'pipelinemind'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  pipelinemind:
+    +materialized: table
